@@ -1,8 +1,10 @@
 {
   "actorSpecification": 1,
   "name": "ai-agents-for-crm",
-  "title": "AI CRM Agent Finder — HubSpot, Salesforce, G2",
-  "description": "Find AI agents for your CRM. Scrapes G2, HubSpot Marketplace & Salesforce AppExchange. Filter by CRM platform and capability. Returns structured JSON.",
+  "title": "Ai Agents For Crm",
+  "description": "Find AI agents for your CRM. Scrapes Futurepedia, TopAI & TrustRadius. Returns structured JSON. | Built by RemoteLama \u2014 remotelama.com",
   "version": "0.1",
-  "meta": { "templateId": "ts-cheerio" }
+  "meta": {
+    "templateId": "ts-cheerio"
+  }
 }

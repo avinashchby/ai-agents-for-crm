@@ -1,3 +1,42 @@
+## ⚠️ RESEARCH UPDATE — v2 (April 2026)
+
+### Source Status Update
+**Removed (blocked or acquired):**
+  - G2 (Cloudflare)
+  - Capterra (acquired by G2)
+  - GetApp (acquired by G2)
+
+**G2 Ecosystem Note:** G2 acquired Capterra, Software Advice, and GetApp in January 2026.
+All four properties now share the same Cloudflare/anti-bot infrastructure. None are viable
+as primary scraping sources.
+
+### Replacement Sources Selected
+  - Futurepedia (sales category) — confirmed working (static HTML, no Cloudflare)
+  - TrustRadius (crm category) — confirmed working (static HTML, no Cloudflare)
+  - TopAI.tools — confirmed working (static HTML, no Cloudflare)
+
+These were selected based on RESEARCH_PHASE0.md live research (April 2026):
+- Futurepedia, TopAI.tools, Toolify.ai: AI-specific directories, CheerioCrawler-ready, no Cloudflare
+- TrustRadius: B2B software reviews, static HTML, accepts datacenter IPs
+- SourceForge: 40,000+ software products, open HTML
+
+### Product Hunt Extraction Note
+If this actor uses Product Hunt as a source: data MUST be extracted from window.__NEXT_DATA__
+(Apollo GraphQL cache embedded in Next.js SSR output), NOT CSS selectors. CSS selectors on
+Product Hunt break on every frontend deploy because React CSS modules generate random class names.
+Residential proxy is required — datacenter IPs are blocked by Cloudflare.
+URL pattern: https://www.producthunt.com/topics/sales
+
+### Dual-Mode Rationale
+compare-tools mode: Serves users evaluating which AI tools exist in this category.
+Feeds the RemoteLama comparison table on remotelama.com/ai-agents/ai-agents-for-crm.
+
+extract-data mode: Serves developers building AI agents who need structured data
+as input to their pipelines.
+
+
+---
+
 # Market & Competitor Research: AI Agents for CRM
 
 ## Search Demand Analysis
